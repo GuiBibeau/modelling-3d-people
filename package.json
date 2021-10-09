@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "serverdev": "yarn workspace @imgmsh/api dev",
+        "server:setup": "yarn workspace @imgmsh/api setup",
+        "client:dev": "yarn workspace @imgmsh/client dev",
+        "setup": "yarn server:setup && yarn",
+        "dev": "concurrently 'client:dev' 'server:dev'"
+    },
+    "dependencies": {
+        "concurrently": "^6.3.0"
+    }
+}
